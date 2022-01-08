@@ -8,7 +8,7 @@ function Particle(x, y, hu, firework) {
     } else {
         this.vel = p5.Vector.random2D()
         // this.vel.mult(random(2, 10))
-        this.vel.mult(random(2, 15))
+        this.vel.mult(random(2, 12))
     }
     this.acc = createVector(0, 0)
     this.applyForce = function (force) {
