@@ -4,14 +4,13 @@ function Particle(x, y, hu, firework) {
     this.lifespan = 255
     this.hu = hu
     if (this.firework) {
-        if(window.innerHeight<600){
-            this.vel = createVector(0, random(-12, -8))
+        if(window.innerHeight<640){
+            this.vel = createVector(0, random(-16, -13))
         }else{
-            this.vel = createVector(0, random(-20, -12))
+            this.vel = createVector(0, random(-17, -15))
         }
     } else {
         this.vel = p5.Vector.random2D()
-        // this.vel.mult(random(2, 10))
         this.vel.mult(random(2, 12))
     }
     this.acc = createVector(0, 0)
