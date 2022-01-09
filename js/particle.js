@@ -5,9 +5,9 @@ function Particle(x, y, hu, firework) {
     this.hu = hu
     if (this.firework) {
         if(window.innerHeight<600){
-            this.vel = createVector(0, random(-16, -8))
+            this.vel = createVector(0, random(-14, -8))
         }else{
-            this.vel = createVector(0, random(-30, -12))
+            this.vel = createVector(0, random(-25, -12))
         }
     } else {
         this.vel = p5.Vector.random2D()
