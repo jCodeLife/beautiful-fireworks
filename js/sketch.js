@@ -3,7 +3,8 @@ var gravity;
 
 function setup() {
     // createCanvas(1303 / 2, 734 / 2)
-    createCanvas(375, 812)
+    // createCanvas(375, 812)
+    createCanvas(window.innerWidth, window.innerHeight)
     colorMode(HSB)
     gravity = createVector(0, 0.2)
     stroke(255)
