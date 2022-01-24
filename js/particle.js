@@ -3,6 +3,7 @@ function Particle(x, y, hu, firework) {
     this.firework = firework
     this.lifespan = 255
     this.hu = hu
+    this.bless=null
     if (this.firework) {
         if(window.innerHeight<640){
             this.vel = createVector(0, random(-16, -13))
@@ -11,7 +12,12 @@ function Particle(x, y, hu, firework) {
         }
     } else {
         this.vel = p5.Vector.random2D()
-        this.vel.mult(random(2, 12))
+        //烟花爆炸大小
+        this.vel.mult(random(2, 30))
+        //烟花爆炸后概率生成文字
+        if(random(1)<0.01){
+            this.bless = new Blessing(this.pos,this.hu);        
+        }
     }
     this.acc = createVector(0, 0)
     this.applyForce = function (force) {
@@ -40,6 +46,10 @@ function Particle(x, y, hu, firework) {
         if (!this.firework) {
             strokeWeight(2)
             stroke(hu, 255, 255, this.lifespan)
+            //展示生成的文字
+            if(this.bless){
+                this.bless.show()
+            }
         } else {
             strokeWeight(4)
             stroke(hu, 255, 255)
