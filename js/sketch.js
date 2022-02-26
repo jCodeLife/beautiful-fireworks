@@ -13,7 +13,7 @@ function setup() {
 function draw() {
     colorMode(RGB)
     background(0,0,0,25)
-    if (random(1) < 0.05) {
+    if (random(1) < 0.2) {
         fireworks.push(new Firework())
     }
     for (var i = fireworks.length - 1; i >= 0; i--) {
