@@ -1,6 +1,5 @@
 var words = [
     "变美",
-    "变帅",
     "快乐",
     "发财",
     "暴富",
@@ -14,10 +13,8 @@ var words = [
     "平安",
     "升职",
     "和睦",
-    "有猫",
     "痊愈",
-    "脱单",
-    "考研上岸"
+    "脱单"
 ];
 
 function Blessing(pos, hu) {
@@ -28,7 +25,7 @@ function Blessing(pos, hu) {
         fill(this.hu, 255, 255);
         textFont("华文彩云");
         textStyle("bold");
-        textSize(40);
+        textSize(20);
         text(this.content, pos.x, pos.y);
     };
 }
